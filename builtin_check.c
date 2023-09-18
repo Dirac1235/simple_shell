@@ -24,7 +24,7 @@ void(*checkbuild(char **arv))(char **arv)
 					break;
 			}
 			if (!arv[0][j])
-				return (T[i].func);
+				return (T[i].function);
 		}
 	}
 	return (0);

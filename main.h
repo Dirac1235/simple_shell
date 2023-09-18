@@ -14,7 +14,7 @@ extern char **environ;
 typedef struct mybuild
 {
 	char *name;
-	void (*func)(char **);
+	void (*function)(char **);
 } mybuild;
 
 char *str_concat(char *s1, char *s2);

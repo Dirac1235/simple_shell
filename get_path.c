@@ -31,7 +31,7 @@ char *_get_path(const char *name)
             }
         }
     }
-    return (NULL); // Return NULL if not found
+    return (NULL); 
 }
 
 

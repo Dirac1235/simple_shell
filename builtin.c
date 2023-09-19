@@ -2,11 +2,11 @@
 
 /**
  * ext - exits the shell
- * @arv: array of words of the entered line
+ * @arr: array of words of the entered line
  */
-void ext(char **arv)
+void ext(char **arr)
 {
 	int i;
-	free(arv);
+	free(arr);
 	exit(0);
 }

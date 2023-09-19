@@ -23,7 +23,7 @@ unsigned int _strlen(char *str);
 char **split_path(char *path);
 char *_get_path(const char *name);
 char *path_checker(char *filename, char **arr);
-void ext(char **arv);
+void ext(char **arr);
 void(*checkbuild(char **arv))(char **arv);
 
 #endif 

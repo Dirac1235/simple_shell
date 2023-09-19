@@ -33,5 +33,3 @@ char *_get_path(const char *name)
     }
     return (NULL); 
 }
-
-

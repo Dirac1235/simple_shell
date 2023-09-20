@@ -6,7 +6,6 @@
  */
 void ext(char **arr)
 {
-	int i;
 	free(arr);
 	exit(0);
 }

@@ -20,7 +20,11 @@ int main( __attribute__((unused))int argc, char *argv[])
         size_t x = 0;
         char *input = NULL;
 		int len;
+        char **inputarr;
 		void (*fun)(char **);
+		char *token;
+        int i = 0;
+
 		if (isatty(STDIN_FILENO))
         {
             printf("$ ");
@@ -30,16 +34,14 @@ int main( __attribute__((unused))int argc, char *argv[])
 		_EOF(len, input);
         input[_strlen(input) - 1] = '\0';
 
-        char **inputarr;
         inputarr = malloc(sizeof(char *) * x);
-        char *token = strtok(input, " ");
+        token = strtok(input, " ");
         if (token == NULL)
         {
             free(input);
             continue;
         }
 
-        int i = 0;
        
 		inputarr[i++] = token;
         while (token)

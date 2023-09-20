@@ -27,7 +27,9 @@ int main( __attribute__((unused))int argc, char *argv[])
 
 		if (isatty(STDIN_FILENO))
         {
-            printf("$ ");
+            _putchar('$');
+            _putchar(' ');
+			
             fflush(stdout);
         }
 		len = getline(&input, &x, stdin);

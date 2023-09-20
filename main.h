@@ -25,5 +25,6 @@ char *_get_path(const char *name);
 char *path_checker(char *filename, char **arr);
 void ext(char **arr);
 void(*checkbuild(char **arv))(char **arv);
+int _putchar(char c);
 
 #endif 

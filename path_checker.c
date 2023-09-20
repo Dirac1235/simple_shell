@@ -25,6 +25,5 @@ char *path_checker(char *filename, char **arr)
 		free(string);
 		i++;
 	}
-	perror(filename);
-	exit(1);
+	return (NULL);
 }

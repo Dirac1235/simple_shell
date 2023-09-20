@@ -15,6 +15,7 @@ void _EOF(int len, char *buff)
 
 int main( __attribute__((unused))int argc, char *argv[])
 {
+	int counter = 1;
     while (1)
     {
         size_t x = 0;
@@ -24,6 +25,7 @@ int main( __attribute__((unused))int argc, char *argv[])
 		void (*fun)(char **);
 		char *token;
         int i = 0;
+		
 
 		if (isatty(STDIN_FILENO))
         {
@@ -71,6 +73,14 @@ int main( __attribute__((unused))int argc, char *argv[])
                 wait(NULL);
             }
         } else {
+					
+					if(!path_checker(inputarr[0],split_path(_get_path("PATH"))))
+					{
+						handle_error(127, argv[0], inputarr[0], &counter);
+						counter++;
+						continue;
+					}
+
 					inputarr[0] = path_checker(inputarr[0],split_path(_get_path("PATH")));
 					if(inputarr[0])
 					{
@@ -100,7 +110,7 @@ int main( __attribute__((unused))int argc, char *argv[])
 					}
 				}
 
-
+		counter++;
         free(input);
     }
 

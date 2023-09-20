@@ -26,5 +26,8 @@ char *path_checker(char *filename, char **arr);
 void ext(char **arr);
 void(*checkbuild(char **arv))(char **arv);
 int _putchar(char c);
+int print_err(char *string);
+char  *intToString(int number); 
+int handle_error(int error_code, char *file, char *cmd_name, int *counter);
 
 #endif 

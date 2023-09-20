@@ -80,3 +80,68 @@ unsigned int _strlen(char *str)
 		co++;
 	return (co);
 }
+/**
+ * _printe - Print a string to the standard error stream
+ * @string: a pointer to a character string that needs to be printed
+ * Return: the number of characters written to the respective output stream
+*/
+int print_err(char *string)
+{
+	return (write(STDERR_FILENO, string, _strlen(string)));
+}
+
+char  *intToString(int number) 
+{
+    
+    int isNegative = 0;
+    int temp;
+    int numDigits = 1;
+    char* str;
+    int divisor = 1;
+    char* ptr;
+	int digit;
+	int i;
+	
+    if (number < 0) {
+        isNegative = 1;
+        number = -number;
+    }
+
+    
+
+	temp = number;
+    while (temp >= 10) {
+        temp /= 10;
+        numDigits++;
+    }
+
+
+	str = (char*)malloc(numDigits + isNegative + 1);
+    if (str == NULL) {
+        fprintf(stderr, "Memory allocation failed.\n");
+        exit(EXIT_FAILURE);
+    }
+	ptr = str;
+
+    if (isNegative) {
+        *ptr = '-';
+        ptr++;
+    }
+
+
+    for (i = 1; i < numDigits; i++) {
+        divisor *= 10;
+    }
+
+    while (divisor >= 1) {
+        digit = number / divisor;
+        *ptr = '0' + digit;
+        ptr++;
+        number -= digit * divisor;
+        divisor /= 10;
+    }
+
+    *ptr = '\0'; 
+
+    return str;
+}

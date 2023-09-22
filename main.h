@@ -25,33 +25,35 @@
 #define HELP_MSG "help command:\n"
 
 /**
- * struct about_info - Structure for a simple shell's program information
- * 
+ * struct allInfo - Structure for a simple shell's program information
+ *
  * @alias_list: Array of strings for alias definitions
- * 
+ *
  * @tokens: Array of strings for command tokens
- * 
+ *
  * @cmd_name: String for the command name
- * 
+ *
+ * @execute_counter: counts the number of execution
+ *
  * @name_projects: String for project name
- * 
+ *
  * @file_desc: Integer for file descriptor
- * 
+ *
  * @get_line: String for input line
- * 
+ *
  * @env: Array of strings for environment variables
  */
 
 typedef struct allInfo
 {
-	char **alias_list;
-	char *get_line;
-	char **tokens;
-	char *name_projects;
-	int execute_counter;
-	int file_desc;
-	char *cmd_name;
-	char **env;
+char **alias_list;
+char *get_line;
+char **tokens;
+char *name_projects;
+int execute_counter;
+int file_desc;
+char *cmd_name;
+char **env;
 } allInfo;
 
 /**
@@ -63,8 +65,8 @@ typedef struct allInfo
 
 typedef struct env_structure
 {
-	char *built_in;
-	int (*function)(allInfo *data);
+char *built_in;
+int (*function)(allInfo *data);
 } env_structure;
 int exit_env(allInfo *data);
 int commandBuilt(allInfo *data);

@@ -1,42 +1,42 @@
 #include "main.h"
 
 /**
- * logical_operations - This function splits a command array into subcommands based
- *                      on logical operators.
+ * logical_operations - This function splits a command array into
+ * subcommands based on logical operators.
  *
- * @commandArr: An array of strings (commands).
- * @num: An integer representing the current position in the commandArr.
- * @operationArray: An array of characters used to store the logical operators.
+ * @cmdArr: An array of strings (commands).
+ * @num: An integer representing the current position in the cmdArr.
+ * @oprArr: An array of characters used to store the logical operators.
  *
  * Return: The number of subcommands created from the input command array.
  */
 
-int logical_operations(char *commandArr[], int num, char operationArray[])
+int logical_operations(char *cmdArr[], int num, char oprArr[])
 {
 	int firstNum;
 	char *temporary = NULL;
 
-	for (firstNum = 0; commandArr[num] != NULL  && commandArr[num][firstNum]; firstNum++)
+	for (firstNum = 0; cmdArr[num] != NULL  && cmdArr[num][firstNum]; firstNum++)
 	{
-		if (commandArr[num][firstNum] == '&' && commandArr[num][firstNum + 1] == '&')
+		if (cmdArr[num][firstNum] == '&' && cmdArr[num][firstNum + 1] == '&')
 		{
-			temporary = commandArr[num];
-			commandArr[num][firstNum] = '\0';
-			commandArr[num] = string_repetitions(commandArr[num]);
-			commandArr[num + 1] = string_repetitions(temporary + firstNum + 2);
+			temporary = cmdArr[num];
+			cmdArr[num][firstNum] = '\0';
+			cmdArr[num] = string_repetitions(cmdArr[num]);
+			cmdArr[num + 1] = string_repetitions(temporary + firstNum + 2);
 			num++;
-			operationArray[num] = '&';
+			oprArr[num] = '&';
 			free(temporary);
 			firstNum = 0;
 		}
-		if (commandArr[num][firstNum] == '|' && commandArr[num][firstNum + 1] == '|')
+		if (cmdArr[num][firstNum] == '|' && cmdArr[num][firstNum + 1] == '|')
 		{
-			temporary = commandArr[num];
-			commandArr[num][firstNum] = '\0';
-			commandArr[num] = string_repetitions(commandArr[num]);
-			commandArr[num + 1] = string_repetitions(temporary + firstNum + 2);
+			temporary = cmdArr[num];
+			cmdArr[num][firstNum] = '\0';
+			cmdArr[num] = string_repetitions(cmdArr[num]);
+			cmdArr[num + 1] = string_repetitions(temporary + firstNum + 2);
 			num++;
-			operationArray[num] = '|';
+			oprArr[num] = '|';
 			free(temporary);
 			firstNum = 0;
 		}
@@ -45,11 +45,12 @@ int logical_operations(char *commandArr[], int num, char operationArray[])
 }
 
 /**
- * tokenize_data - This function tokenizes an input string, stores
- *                 tokens in data->tokens, and sets the command name in data->cmd_name.
+ * tokenizeData - This function tokenizes an input string,
+ * stores tokens in data->tokens,
+ * and sets the command name in data->cmd_name.
  *
  * @data: A parameter in these functions that stores information and
- *        performs operations related to the program's data and execution.
+ * performs operations related to the program's data and execution.
  *
  * Return: The function doesn't return a value (void).
  */

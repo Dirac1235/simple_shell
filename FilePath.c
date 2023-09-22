@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * search_file - This function looks for the presence of an executable file
- *               in the directories listed in the PATH environment variable
- *               and updates the command path accordingly.
+ * searchFile - This function looks for the presence of an executable file
+ * in the directories listed in the PATH environment variable
  *
  * @data: A pointer to a structure of type "about" containing various
  *        details about the program's execution and environment.
@@ -14,7 +13,7 @@
 
 int searchFile(allInfo *data)
 {
-	int firstNum = 0, returnCode = 0;
+	int firstNum = 0, retCode = 0;
 	char **dir;
 
 	if (!data->cmd_name)
@@ -34,29 +33,29 @@ int searchFile(allInfo *data)
 	for (firstNum = 0; dir[firstNum]; firstNum++)
 	{
 		dir[firstNum] = mergeString(dir[firstNum], data->tokens[0]);
-		returnCode = check(dir[firstNum]);
-		if (returnCode == 0 || returnCode == 126)
+		retCode = check(dir[firstNum]);
+		if (retCode == 0 || retCode == 126)
 		{
 			errno = 0;
 			free(data->tokens[0]);
 			data->tokens[0] = string_repetitions(dir[firstNum]);
 			free_array_pointes(dir);
-			return (returnCode);
+			return (retCode);
 		}
 	}
 	free(data->tokens[0]);
 	data->tokens[0] = NULL;
 	free_array_pointes(dir);
-	return (returnCode);
+	return (retCode);
 }
 
 /**
- * path_of_file - This function retrieves directories from the PATH environment variable,
- *                tokenizes them, and returns them as an array of strings.
+ * filePath - This function retrieves directories from the
+ * PATH environment variable, tokenizes them.
  *
  * @data: A pointer to a "program_data" structure within the functions.
  *
- * Return: An array of strings containing directories extracted from the PATH environment variable.
+ * Return: An array of strings containing directories.
  */
 
 char **filePath(allInfo *data)

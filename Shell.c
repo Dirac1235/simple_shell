@@ -28,7 +28,7 @@ int main(int argc, char *argv[], char *env[])
 }
 
 /**
- * handle_short_cut - Prints a newline and the PROMPT_MSG as a command prompt.
+ * handleShortCut - Prints a newline and the PROMPT_MSG as a command prompt.
  * @UNUSED: Intentionally unused parameter to suppress compiler warnings.
  * Return: No return value.
  */

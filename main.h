@@ -87,7 +87,7 @@ char *str_tok(char *line, char *delim);
 int executed(allInfo *data);
 void handleShortCut(int operations UNUSED);
 int _getline(allInfo *data);
-int logical_operations(char *commandArr[], int num, char operationArray[]);
+int logical_operations(char *cmdArr[], int num, char oprArray[]);
 int builder_set_key(allInfo *data);
 int keyUnset(allInfo *data);
 void stringLong(long number, char *str, int base);

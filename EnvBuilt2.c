@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * built_list - handle built-in commands in the shell
+ * builtList - handle built-in commands in the shell
  * @data: It takes a pointer to a structure of type about_info
  * Return: int value
  */
@@ -31,7 +31,7 @@ int builtList(allInfo *data)
 }
 
 /**
- * command_built - handle the "cd" command,
+ * commandBuilt - handle the "cd" command,
  * which is used to change the current working directory.
  * @data: It takes a pointer to a structure of type about_info
  * Return: int value
@@ -70,7 +70,7 @@ int commandBuilt(allInfo *data)
 }
 
 /**
- * help_built - provide help messages for built-in commands in the shell.
+ * helpBuilt - provide help messages for built-in commands in the shell.
  * It checks the entered command against a list of known commands and displays
  * the corresponding help message.
  * @data: It takes a pointer to a structure of type about_info

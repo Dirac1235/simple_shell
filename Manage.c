@@ -28,7 +28,7 @@ char *getFun(allInfo *data, char *Name)
 }
 
 /**
- * printFun - print information about aliases stored in data->alias_list
+ * printfFun - print information about aliases stored in data->alias_list
  * @data: it takes a pointer to a structure of type about_info
  * @Name: character array, representing a Name
  * Return: int value

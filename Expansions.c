@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * expandVar - This function processes and expands variables in a given text line
- * stored in the "info" structure.
+ * expandVar - This function processes and expands variables in a given
+ * text line stored in the "info" structure.
  *
  * @data: A struct of type "about_info" in the function "expandVar."
  *
@@ -53,8 +53,8 @@ void expandVar(allInfo *data)
 }
 
 /**
- * expand_alias - This function searches for and expands aliases in the provided
- * input line stored in "info->get_line."
+ * expand_alias - This function searches for and expands
+ * aliases in the provided input line stored in "info->get_line."
  *
  * @data: A struct of type "about_info" in the function "expandVar."
  *
@@ -100,12 +100,14 @@ void expand_alias(allInfo *data)
 }
 
 /**
- * new_buffer - This function appends the "concatenate_string" to the end of the "buffer."
+ * new_buffer - This function appends the "concatenate_string"
+ * to the end of the "buffer."
  *
  * @buf: A character array to which "concatenate_string" is appended.
  * @concatStr: A string that is concatenated to "buffer."
  *
- * Return: The total length of the resulting string after appending "concatenate_string" to "buffer."
+ * Return: The total length of the resulting string after
+ * appending "concatenate_string" to "buffer."
  */
 
 int new_buffer(char *buf, char *concatStr)

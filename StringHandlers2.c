@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * string_long - This function converts a long integer to its,
+ * stringLong - This function converts a long integer to its,
  * string representation in the specified numeric base.
  *
  * @num: The long integer to be converted.

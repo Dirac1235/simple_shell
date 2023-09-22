@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * handle_error - This function prints error messages based on the provided
- *                error code and program information.
+ * handle_error - This function prints error messages based
+ * on the provided error code and program information.
  *
  * @e_code: An integer representing the error code.
- * @data: A pointer to a program_info struct which contains program information.
+ * @data: A pointer to a program_info struct
+ * which contains program information.
  *
  * Return: Zero (0).
  */

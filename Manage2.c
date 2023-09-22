@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_key - retrieve the value associated with
+ * getKey - retrieve the value associated with
  * a specified environment variable (key) from the
  * data->env array.
  * @key: a character array, representing a key (environment variable).
@@ -28,7 +28,7 @@ char *getKey(char *key, allInfo *data)
 }
 
 /**
- * set_key - set or update an environment variable (key)
+ * setKey - set or update an environment variable (key)
  * with a specified value (value) in the data->env array.
  * @key: a character array, representing a key (environment variable).
  * @value: representing a value for the environment variable.
@@ -65,7 +65,7 @@ int setKey(char *key, char *value, allInfo *data)
 }
 
 /**
- * env_print - print the environment variables stored in the data->env array.
+ * envPrint - print the environment variables stored in the data->env array.
  * @data: it takes a pointer to a structure of type about_info
  */
 

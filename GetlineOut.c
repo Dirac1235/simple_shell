@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _getline - This function is responsible for reading and processing input data
- *            to prepare commands for execution within a shell program.
+ * _getline - This function is responsible for reading,
+ * and processing input data
  *
- * @data: A pointer to an "about" structure, which holds program state and configuration.
+ * @data: A pointer to an "about" structure,
+ * which holds program state and configuration.
  *
- * Return: The function returns the number of characters in the line read or -1
- *         if there is no more input data to read.
+ * Return: The function returns the number of characters in the line,
+ * -1 if there is no more input data to read.
  */
 
 
@@ -48,12 +49,15 @@ int _getline(allInfo *data)
 }
 
 /**
- * str_tok - This function provides a custom implementation of tokenizing a string based on a delimiter.
+ * str_tok - This function provides a custom implementation of,
+ * tokenizing a string based on a delimiter.
  *
  * @line: A pointer to the input string that is being tokenized.
- * @delim: A pointer to a string containing delimiter characters used to split the input string into tokens.
+ * @delim: A pointer to a string containing delimiter characters,
+ * used to split the input string into tokens.
  *
- * Return: The next token in the input string or NULL if there are no more tokens to be found.
+ * Return: The next token in the input string or NULL,
+ * if there are no more tokens to be found.
  */
 
 char *str_tok(char *line, char *delim)

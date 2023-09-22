@@ -86,7 +86,7 @@ void reverse(char *str)
 }
 
 /**
- * _print - This function prints a character,
+ * terPrint - This function prints a character,
  * string to the standard output stream.
  *
  * @str: A pointer to the character string to be printed.

@@ -3,8 +3,8 @@
 /**
  * executed - This function executes commands provided in the "info" struct.
  *
- * @data: A pointer to a struct of type "about" which contains information related
- *        to the program's execution.
+ * @data: A pointer to a struct of type "about" which contains
+ * information related  to the program's execution.
  *
  * Return: An exit status or error code.
  */

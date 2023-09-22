@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * string_long - This function converts a long integer to its string representation
- *               in the specified numeric base.
+ * string_long - This function converts a long integer to its,
+ * string representation in the specified numeric base.
  *
  * @num: The long integer to be converted.
  * @str: A character array to store the resulting string.
@@ -40,10 +40,12 @@ void stringLong(long num, char *str, int floor)
 }
 
 /**
- * charSize - This function counts the number of occurrences of a specific
- *                   character in a given string.
+ * charSize - This function counts the number of occurrences,
+ * of a specific character in a given string.
+ *
  * @str: A pointer to a character string.
- * @chars: A pointer to a character representing the character to count in the string.
+ * @chars: A pointer to a character representing the character,
+ * to count in the string.
  *
  * Return: The count of occurrences of the specified character in the string.
  */
@@ -65,9 +67,11 @@ int charSize(char *str, char *chars)
  * _atoi - This function converts a character string to an integer, taking into
  *         account the presence of sign characters ('+' and '-').
  *
- * @char_arr: A pointer to the character string that needs to be converted to an integer.
+ * @char_arr: A pointer to the character string that,
+ * needs to be converted to an integer.
  *
- * Return: The integer value obtained by converting the input string, considering sign characters.
+ * Return: The integer value obtained by converting the,
+ * input string, considering sign characters.
  */
 
 int _atoi(char *char_arr)

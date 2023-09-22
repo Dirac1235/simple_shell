@@ -38,7 +38,8 @@ char *string_repetitions(char *str)
 
 
 /**
- * _printe - This function prints a character string to the standard error stream.
+ * errPrint - This function prints a character string,
+ * to the standard error stream.
  *
  * @str: A pointer to the character string to be printed.
  *
@@ -52,15 +53,15 @@ int errPrint(char *str)
 
 
 /**
- * string_comparions - This function compares two strings up to a specified number
- *                     of characters.
+ * stringComparitions - This function compares two,
+ * strings up to a specified number of characters.
  *
  * @str_one: The first input string to be compared.
  * @str_two: The second input string to be compared.
  * @num: The number of characters to compare in the strings.
  *
- * Return: 1 if the two input strings are equal up to the specified number of characters,
- *         0 otherwise.
+ * Return: 1 if the two input strings are equal up to,
+ * the specified number of characters, 0 otherwise.
  */
 
 int stringComparitions(char *str_one, char *str_two, int num)

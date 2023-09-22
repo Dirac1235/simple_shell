@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * main - The main function initializes program structures, sets up signal handling,
- *        and decides whether to display a prompt message based on input and terminal
- *        conditions.
+ * main - The main function initializes program structures
  *
  * @argc: The number of command-line arguments.
  * @argv: An array of pointers to the command-line arguments.
@@ -42,7 +40,8 @@ void handleShortCut(int operations UNUSED)
 }
 
 /**
- * start_with - Initializes 'about' struct using 'argc', 'argv', and 'env' for the shell program.
+ * start_with - Initializes 'about' struct using 'argc', 'argv',
+ * and 'env' for the shell program.
  *
  * @info: Pointer to 'about' struct.
  * @argc: Command-line argument count.

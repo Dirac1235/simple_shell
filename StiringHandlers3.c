@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * string_size - This function calculates the length of the input string.
+ * stringSize - This function calculates the length of the input string.
  *
- * @str: A pointer to a character array (a string) whose length needs to be determined.
+ * @str: A pointer to a character array (a string) whose,
+ * length needs to be determined.
  *
- * Return: The length of the input string excluding the null terminator, or 0 if the string is NULL.
+ * Return: The length of the input string excluding the,
+ * null terminator, or 0 if the string is NULL.
  */
 
 int stringSize(char *str)
@@ -20,10 +22,9 @@ int stringSize(char *str)
 	return (counter - 1);
 }
 
-
-
 /**
- * string_merging - This function concatenates two strings (str_one and str_two).
+ * mergeString - This function concatenates,
+ * two strings (str_one and str_two).
  *
  * @str_one: Character array representing the first string.
  * @str_two: Character array representing the second string.
@@ -85,7 +86,8 @@ void reverse(char *str)
 }
 
 /**
- * _print - This function prints a character string to the standard output stream.
+ * _print - This function prints a character,
+ * string to the standard output stream.
  *
  * @str: A pointer to the character string to be printed.
  *

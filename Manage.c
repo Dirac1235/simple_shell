@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_fun - retrieve the value associated
+ * getFun - retrieve the value associated
  * with a given Name from a list of aliases.
  * @data: It takes a pointer to a structure of type about_info
  * @Name: character array, representing a Name
@@ -28,7 +28,7 @@ char *getFun(allInfo *data, char *Name)
 }
 
 /**
- * printf_fun - print information about aliases stored in data->alias_list
+ * printFun - print information about aliases stored in data->alias_list
  * @data: it takes a pointer to a structure of type about_info
  * @Name: character array, representing a Name
  * Return: int value

@@ -73,7 +73,7 @@ int builtin_alias(allInfo *data)
 
 	while (data->tokens[++i])
 	{
-		if (size_characters(data->tokens[i], "="))
+		if (charSize(data->tokens[i], "="))
 			set_fun(data->tokens[i], data);
 		else
 			printfFun(data, data->tokens[i]);
